@@ -1,0 +1,19 @@
+.tm-sidebar{
+    display: none;
+}
+.tm-team-description-container {
+    max-width: 100%;
+}
+.tm-section-title{
+    text-align: center;
+    text-transform: uppercase;
+}
+.tm-section-description{
+    text-align: center;
+}
+.tm-team-img > img{
+    display: none;
+}
+.gallery-container{
+    display: none;
+}
