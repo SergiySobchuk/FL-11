@@ -71,7 +71,6 @@
     .padding-medium a{
         color: black;
         pointer-events: none;
-        cursor: default;
     }
     body{
         padding-top: 0;
@@ -94,6 +93,9 @@
         padding: 10px 10px 10px;
     }
 }
+
+
+@media screen {
 .box-bg:hover{
     background-color: lightskyblue;
 }
@@ -160,4 +162,23 @@ section::before {
     font-size: 10px;
     font-weight: 600;
     vertical-align: super;
+}
+.gallery-container > li{
+    padding: 6px 6px 0 6px;
+
+}
+.gallery-container > li:nth-child(2n){
+    background-color: rgb(243, 243, 243); 
+}
+.box-work > div > h2 {
+    font-size: 22px;
+}
+.box-work > div > p {
+    font-size: 10px;
+    font-style: italic;
+}
+.box-work > div > p:first-letter {
+    font-size: 15px;
+}
+
 }
