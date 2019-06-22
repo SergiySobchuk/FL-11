@@ -180,5 +180,47 @@ section::before {
 .box-work > div > p:first-letter {
     font-size: 15px;
 }
+#contact > h2{
+    text-align: left;
+    font-size: 22px;
+}
+.form-control{
+    border: 2px solid #76cdd7;
+    font-size: 12px;
+}
+#contact_name, #contact_email, #contact_subject{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+#contact_name:focus, #contact_email:focus, #contact_subject:focus{
+    background-color: #76cdd7;
+    color: #fff;
+    border-radius: 5px;
+}
+input#contact_email:focus {
+    background-image: url(../img/email-icon.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: right ;
+}    
+#contact_message{
+    border-radius: 5px;
+    resize: none;
+}
+.btn-primary{
+    border: 2px solid #76cdd7;
+    background: none;
+    color:  #76cdd7;
+    border-radius: 1px;
+    float: right;
+    padding: 10px 50px;
+}
+.btn-primary:hover{
+    background: #76cdd7;
+    color: white;
+    border: 2px solid #76cdd7;
+}
+
 
 }
