@@ -115,6 +115,9 @@
     letter-spacing: 4px;
     word-spacing: 20px;
     text-shadow: 1px 6px 1px lightskyblue;
+    transition: transform 3s linear; 
+    transform: rotateY(360deg);
+    transition-delay: 2s;
 }
 .flex-2-col{
     display: flex;    
