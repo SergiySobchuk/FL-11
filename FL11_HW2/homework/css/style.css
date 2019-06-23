@@ -163,11 +163,11 @@ section::before {
     font-weight: 600;
     vertical-align: super;
 }
-.gallery-container > li{
+li.box-work{
     padding: 6px 6px 0 6px;
 
 }
-.gallery-container > li:nth-child(2n){
+li.box-work:nth-child(2n){
     background-color: rgb(243, 243, 243); 
 }
 .box-work > div > h2 {
@@ -227,6 +227,15 @@ input#contact_email:focus {
 .tm-nav-item:hover{
     background: #e9eaeb;
 }
+h2 + p{
+    font-style: italic;
+    line-height: 22px;
+}
+p {
+    text-indent: 10px;
+    font-size: 12px;
+}
+
 
 
 
