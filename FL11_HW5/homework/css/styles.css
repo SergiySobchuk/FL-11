@@ -1,32 +1,106 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #162b4d;
-  --link: #fff;
-  --link--hover: #b8b8b8;
-  --bg-footer-color: #162b4d;;
+*{
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 body {
   font-family: roboto;
-}
-.post-1 {
-	background: #B71757;
-}
-.post-2 {
-	background: #0D7E71;
-}
-.post-3 {
-	background: #b1660e;
-}
-.post-4 {
-	background: #d12767;
+  background-color: #0b192f;
 }
 .post-5 {
 	background: #2d95bb;
 }
-
-/* Your styles go here */
+@media screen and (min-device-width : 768px)
+{
+  #header{
+    background:#162b4d;
+    display: flex;
+  }
+  #logo{
+    flex-grow: 1;
+    color: white;
+    font-size: 32px;
+    padding: 40px 30px;
+  }
+  #logo > span {
+    color: rosybrown;  
+    font-size: 32px;
+  }
+  #links{
+    flex-grow: 2;
+    color: white;
+    font-size: 20px;
+    padding-top: 40px; 
+    text-align: right;
+    padding-right: 10%;
+  }
+  #links > a{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+  }
+  #content{
+    display: flex;
+  }
+  #posts{
+    margin-top: 20px;
+    width: 74%;
+  }
+  .post-1 {
+    background: #B71757;
+    display: flex;
+    width: 100%;
+    margin-left: 0;
+  }  
+  .post-2 {
+  	background: #0D7E71;
+    display: flex;
+    width: 100%;
+    margin-left: 0;
+  }
+  .post-3 {
+  	background: #b1660e;
+    display: flex;
+    width: 100%;
+    margin-left: 0;
+  }
+  .post-4 {
+  	background: #d12767;
+    display: flex;
+    width: 100%;
+    margin-left: 0;
+  }
+  .post-style > img {
+    width: 50%;
+  }
+  .post-style > p {
+    width: 50%;
+    font-size: 16px;
+    padding: 30px;
+    color: white;
+    line-height: 32px;
+  }
+  .post-style > p > span{
+    font-size: 50px;
+  }
+  #news{
+    width: 25%;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .news-style{
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: white;
+  }
+  .news-style > p{
+    padding: 25px;
+  }
+  .news-style > p > span{
+    font-size: 30px;
+  }
+  .news-style > img {
+    height: auto;
+    width: 100%;
+  }
+}
