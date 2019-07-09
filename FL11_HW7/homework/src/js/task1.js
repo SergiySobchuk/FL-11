@@ -1,10 +1,11 @@
 let askEmail ='';
 let askPass = '';
+const sixLeter = 6;
+const fiveLeter = 5;
 askEmail = prompt('enter your email', 'user@gmail.com');
 if (askEmail === null || askEmail === ''){
     alert('Canceled');
-}
-else if(askEmail.length < 6){
+}else if(askEmail.length < sixLeter){
     do{
         alert('I dont know any emails having name length less than 6 symbols');
         askEmail = prompt('enter your email', 'user@gmail.com');
@@ -12,16 +13,13 @@ else if(askEmail.length < 6){
             alert('Canceled');
             break;
         }
-    } while (askEmail.length < 6)
+    } while (askEmail.length < sixLeter)
     alert('I don’t know you');
-}
-else if(askEmail === 'user@gmail.com' || askEmail === 'admin@gmail.com') {
+}else if(askEmail === 'user@gmail.com' || askEmail === 'admin@gmail.com') {
     askPass = prompt('enter your password', 'UserPass');
     if (askPass === null || askPass === ''){
         alert('Canceled');
-    }
-    else if(askEmail === 'user@gmail.com' && askPass !== 'UserPass')
-    {
+    }else if(askEmail === 'user@gmail.com' && askPass !== 'UserPass'){
         do{
         alert('Wrong password');
         askPass = prompt('enter your password again', 'UserPass');
@@ -30,9 +28,7 @@ else if(askEmail === 'user@gmail.com' || askEmail === 'admin@gmail.com') {
             break;
         }
         } while (askPass !== 'UserPass')
-    }
-    else if(askEmail === 'admin@gmail.com' && askPass !== 'AdminPass')
-    {
+    }else if(askEmail === 'admin@gmail.com' && askPass !== 'AdminPass'){
         do{
         alert('Wrong password');
         askPass = prompt('enter your password again', 'AdminPass');
@@ -42,15 +38,17 @@ else if(askEmail === 'user@gmail.com' || askEmail === 'admin@gmail.com') {
         }
         } while (askPass !== 'AdminPass')
     }
+    let askChangePass = '';
     askChangePass = confirm('Do you want to change your password?');
     if(askChangePass){
+        let confirmPass = '';
         confirmPass = prompt('write the old password', 'UserPass');
         if(askPass === confirmPass){
+            let askNewPass = '';
             askNewPass = prompt('enter your new password', 'UserNewPass');
             if(askNewPass === null){
                 alert('Canceled');
-            }
-            else if(askNewPass.length < 5){
+            }else if(askNewPass.length < fiveLeter){
                 do{
                     alert('Its too short password. Sorry.');
                     askNewPass = prompt('enter your new password', 'UserNewPass');
@@ -58,34 +56,28 @@ else if(askEmail === 'user@gmail.com' || askEmail === 'admin@gmail.com') {
                         alert('Canceled');
                         break;
                     }
-                } while(askNewPass.length < 5)
-            }
-            else{
+                } while(askNewPass.length < fiveLeter)
+            }else{
+                let askNewPassAgain = '';
                 askNewPassAgain = prompt('enter your new password again', 'UserNewPass');
                 if (askNewPassAgain === null){
                     alert('Canceled');
-                }
-                else if(askNewPass === askNewPassAgain){
+                }else if(askNewPass === askNewPassAgain){
                     alert('You have successfully changed your password.')
                     askPass = askNewPass;
-                }
-                else{
+                }else{
                     alert('You wrote the wrong password.')
                 }
             }
-        }
-        else if(confirmPass == null){
+        }else if(confirmPass === null){
             alert('Canceled');
-        }
-        else{
+        }else{
             alert('You wrote the wrong password.')
         }    
-    }
-    else{
+    }else{
         alert('You have failed the change.');
     }
-}
-else{
+}else{
     alert('I don’t know you');
 }
 
