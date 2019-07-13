@@ -2,7 +2,6 @@ function formatTime(num){
     let day = 0;
     let hour = 0;
     let minute = 0;
-
     if(num > 1440){
         day = Math.floor(num/1440)
         num = num - day * 1440;
