@@ -1,4 +1,4 @@
-console.log('*************task1**************');
+console.log('*************task0**************');
 
 function getNumbers(inStr){
     let inArr = inStr.split('');
@@ -12,7 +12,7 @@ function getNumbers(inStr){
 }
 console.log(getNumbers('1e2y3wd-sd5ds7fadsf9@ds'));
 
-console.log('*************task2**************');
+console.log('*************task1**************');
 
 function findTypes(){
     let arrayCountType = {object: 0, number: 0, boolean: 0, string: 0};
@@ -31,4 +31,17 @@ function findTypes(){
 }
 console.log(findTypes(5, 'hello', false, null));
 
+console.log('*************task2**************');
+
+function executeforEach(array, func){
+    array.forEach(element => {
+        func(element);
+    });
+}
+executeforEach([1,2,3], function(el) { console.log(el) })
+
 console.log('*************task3**************');
+
+
+
+console.log('*************task4**************');
