@@ -3,11 +3,11 @@ console.log('*************task0**************');
 function getNumbers(inStr){
     let inArr = inStr.split('');
     let outArr = [];
-    inArr.forEach(element => {
-        if (!isNaN(parseInt(element))){
-            outArr.push(parseInt(element));
+    for (let i = 0; i < inArr.length; i++) {
+        if (!isNaN(parseInt(inArr[i]))){
+            outArr.push(parseInt(inArr[i]));
         }
-    });
+    }
     return outArr;
 }
 console.log(getNumbers('1e2y3wd-sd5ds7fadsf9@ds'));
@@ -34,9 +34,9 @@ console.log(findTypes(5, 'hello', false, null));
 console.log('*************task2**************');
 
 function executeforEach(array, func){
-    array.forEach(element => {
-        func(element);
-    });
+    for (let i = 0; i < array.length; i++) {
+        func(array[i]);
+    }
 }
 executeforEach([1,2,3], function(el) { console.log(el) })
 
@@ -44,11 +44,24 @@ console.log('*************task3**************');
 
 function mapArray(array, func){
     let newArray = [];
-    array.forEach(element => {
-        newArray.push(func(element));
-    });
+    for (let i = 0; i < array.length; i++) {
+        newArray.push(func(array[i]));
+    }
     return console.log(newArray);
 }
 mapArray([2, 5, 8], function(el) { return el + 3 }) // returns [5, 8, 11]
 
 console.log('*************task4**************');
+
+function filterArray(array, func){
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if(func(array[i])){
+           newArray.push(array[i]);
+        }
+    }
+    return console.log(newArray);
+}
+filterArray([2, 5, 8], function(el) { return el > 3 }) // returns [5, 8]
+
+console.log('*************task5**************');
