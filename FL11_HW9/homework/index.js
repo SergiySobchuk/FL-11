@@ -42,6 +42,13 @@ executeforEach([1,2,3], function(el) { console.log(el) })
 
 console.log('*************task3**************');
 
-
+function mapArray(array, func){
+    let newArray = [];
+    array.forEach(element => {
+        newArray.push(func(element));
+    });
+    return console.log(newArray);
+}
+mapArray([2, 5, 8], function(el) { return el + 3 }) // returns [5, 8, 11]
 
 console.log('*************task4**************');
