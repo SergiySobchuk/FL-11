@@ -65,3 +65,18 @@ function filterArray(array, func){
 filterArray([2, 5, 8], function(el) { return el > 3 }) // returns [5, 8]
 
 console.log('*************task5**************');
+
+function showFormattedDate(data){
+    let formatYear = data.getFullYear();
+    let formatMonth = data.getMonth();
+    let formatDay = data.getDate();
+
+    let month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    for (let i = 0; i < month.length; i++) {
+        if(formatMonth === i){
+            formatMonth = month[i];
+        }
+    }
+    return console.log("Date: "+formatMonth+ ' ' +formatDay+' '+formatYear);
+}
+showFormattedDate(new Date('2019-01-27T01:10:00'));
