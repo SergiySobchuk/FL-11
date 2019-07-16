@@ -38,7 +38,9 @@ function executeforEach(array, func){
         func(array[i]);
     }
 }
-executeforEach([1,2,3], function(el) { console.log(el) })
+executeforEach([1,2,3], function(el) {
+    console.log(el);
+});
 
 console.log('*************task3**************');
 
@@ -47,9 +49,11 @@ function mapArray(array, func){
     for (let i = 0; i < array.length; i++) {
         newArray.push(func(array[i]));
     }
-    return console.log(newArray);
+    return newArray;
 }
-mapArray([2, 5, 8], function(el) { return el + 3 }) // returns [5, 8, 11]
+console.log(mapArray([2, 5, 8], function(el) {
+    return el + 3 
+})); 
 
 console.log('*************task4**************');
 
@@ -60,9 +64,11 @@ function filterArray(array, func){
            newArray.push(array[i]);
         }
     }
-    return console.log(newArray);
+    return newArray;
 }
-filterArray([2, 5, 8], function(el) { return el > 3 }) // returns [5, 8]
+console.log(filterArray([2, 5, 8], function(el) { 
+    return el > 3 
+})); 
 
 console.log('*************task5**************');
 
@@ -71,13 +77,13 @@ function showFormattedDate(data){
     let formatMonth = data.getMonth();
     let formatDay = data.getDate();
 
-    let month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    let month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     for (let i = 0; i < month.length; i++) {
         if(formatMonth === i){
             formatMonth = month[i];
         }
     }
-    return console.log("Date: "+formatMonth+ ' ' +formatDay+' '+formatYear);
+    return console.log('Date: '+formatMonth+ ' ' +formatDay+' '+formatYear);
 }
 showFormattedDate(new Date('2019-01-27T01:10:00'));
 
@@ -87,21 +93,88 @@ function canConvertToDate(data){
     let checkData = new Date(data);
     if(isNaN(checkData.getDate())){
         return console.log(false);
-        ;
     }else{
         return console.log(true);
-        ;
     }
 } 
-canConvertToDate('2016-13-18T00:00:00') // false
-canConvertToDate('2016-03-18T00:00:00') // true
+canConvertToDate('2016-13-18T00:00:00') 
+canConvertToDate('2016-03-18T00:00:00') 
 
-console.log('*************task6**************');
+console.log('*************task7**************');
 
 function daysBetween(date1, date2){
     let secInOneDay=1000*60*60*24;
-    return console.log(Math.round((date2-date1)/secInOneDay));
+    return Math.round((date2-date1)/secInOneDay);
 }
-daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00'))  // 32
+console.log(daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00')));
 
-console.log('*************task7**************');
+console.log('*************task8**************');
+let data = [
+    {
+      '_id': '5b5e3168c6bf40f2c1235cd6',
+      'index': 0,
+      'birthday': '2016-03-18T00:00:00',
+      'eyeColor': 'green',
+      'name': 'Stein',
+      'favoriteFruit': 'apple'
+    },
+    {
+      '_id': '5b5e3168e328c0d72e4f27d8',
+      'index': 1,
+      'birthday': '1991-02-11T00:00:00',
+      'eyeColor': 'blue',
+      'name': 'Cortez',
+      'favoriteFruit': 'strawberry'
+    },
+    {
+      '_id': '5b5e3168cc79132b631c666a',
+      'index': 2,
+      'birthday': '1984-04-17T00:00:00',
+      'eyeColor': 'blue',
+      'name': 'Suzette',
+      'favoriteFruit': 'apple'
+    },
+    {
+      '_id': '5b5e31682093adcc6cd0dde5',
+      'index': 3,
+      'birthday': '1994-04-17T00:00:00',
+      'eyeColor': 'green',
+      'name': 'George',
+      'favoriteFruit': 'banana'
+    }
+  ]
+
+function getAmountOfAdultPeople(data) {
+    let adultDate = new Date();
+    let count = 0;
+    adultDate.setFullYear(adultDate.getFullYear() - 18);
+    for (let i = 0; i < data.length; i++) {
+        let birthday = new Date(data[i].birthday);
+         if(daysBetween(birthday, adultDate) > 0){
+            count++;
+         } 
+    }
+    return count
+}
+console.log(getAmountOfAdultPeople(data));
+
+console.log('*************task9**************');
+
+function keys(obj){
+    let arr = [];
+    for (let key in obj){
+        arr.push(key);
+    }
+    return arr;
+}
+console.log(keys({keyOne: 1, keyTwo: 2, keyThree: 3}));
+
+console.log('*************task10**************');
+function values(obj){
+    let arr = [];
+    for (let key in obj){
+        arr.push(obj[key]);
+    }
+    return arr;
+}
+console.log(values({keyOne: 1, keyTwo: 2, keyThree: 3}));
