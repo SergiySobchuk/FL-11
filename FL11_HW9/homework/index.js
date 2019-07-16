@@ -95,3 +95,13 @@ function canConvertToDate(data){
 } 
 canConvertToDate('2016-13-18T00:00:00') // false
 canConvertToDate('2016-03-18T00:00:00') // true
+
+console.log('*************task6**************');
+
+function daysBetween(date1, date2){
+    let secInOneDay=1000*60*60*24;
+    return console.log(Math.round((date2-date1)/secInOneDay));
+}
+daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00'))  // 32
+
+console.log('*************task7**************');
