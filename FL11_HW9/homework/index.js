@@ -80,3 +80,18 @@ function showFormattedDate(data){
     return console.log("Date: "+formatMonth+ ' ' +formatDay+' '+formatYear);
 }
 showFormattedDate(new Date('2019-01-27T01:10:00'));
+
+console.log('*************task6**************');
+
+function canConvertToDate(data){
+    let checkData = new Date(data);
+    if(isNaN(checkData.getDate())){
+        return console.log(false);
+        ;
+    }else{
+        return console.log(true);
+        ;
+    }
+} 
+canConvertToDate('2016-13-18T00:00:00') // false
+canConvertToDate('2016-03-18T00:00:00') // true
